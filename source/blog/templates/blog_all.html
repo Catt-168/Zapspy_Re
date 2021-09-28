@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Catt Blog</h1>
+        {% for instance in obj %}
+            <a href="{% url 'blog:detail' instance.id %}"><h2>{{ instance.title }}</h2></a>
+            <p>
+                {{ instance.description }}
+                {{ instance.date }}
+            </p>
+        {% endfor %}
+    </div>
+</body>
+</html>
