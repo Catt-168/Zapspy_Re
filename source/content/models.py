@@ -6,3 +6,6 @@ class Project(models.Model):
     description = models.TextField(max_length=256)
     image = models.ImageField(upload_to="content/images")
     link = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title

@@ -3,7 +3,7 @@ from .models import Blog
 
 
 def all_blog(request):
-    obj = Blog.objects.order_by('-date')[:3]
+    obj = Blog.objects.order_by('-date')[:6]
     context = {
         "obj": obj,
     }
